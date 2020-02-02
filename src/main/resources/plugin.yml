@@ -1,0 +1,7 @@
+name: TrainReboot
+version: ${project.version}
+main: com.cragon.trainreboot.TrainReboot
+api-version: 1.13
+authors: [CraftyDragon678]
+description: 철도 서버 리부팅
+website: http://github.com/CraftyDragon678/TrainReboot
