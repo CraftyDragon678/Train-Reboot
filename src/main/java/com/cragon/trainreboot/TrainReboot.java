@@ -33,7 +33,7 @@ public final class TrainReboot extends JavaPlugin {
 
 
         Bukkit.getScheduler().scheduleSyncDelayedTask(this, () -> {
-            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "restart");
+            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "stop");
         }, 60 * 20L);
     }
 }
