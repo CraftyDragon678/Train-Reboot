@@ -1,0 +1,14 @@
+language: java
+jdk:
+  - openjdk8
+jobs:
+  include:
+    - stage: test
+      script:
+        - mvn clean test
+    - stage: deploy
+      if: tag IS present AND repo = PixelOutlaw/spigot-plugin-parent
+      before_script:
+        - wget https://gist.githubusercontent.com/ToppleTheNun/c2fb7e52f83a37cefba9741a9022288d/raw/fe7ce79566c9b8db2336c8d732421f070167cd05/settings.xml
+      script:
+        - mvn deploy --settings settings.xml -P bintray-distribution
